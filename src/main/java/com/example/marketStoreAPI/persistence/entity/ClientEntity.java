@@ -30,7 +30,7 @@ public class ClientEntity {
   @Column(name = "correo_electronico")
   private String emailAddress;
 
-  @OneToMany(mappedBy = "client")
+  @OneToMany(mappedBy = "clientEntity")
   private List<PurchaseEntity> purchaseEntities;
 
   public String getId() {

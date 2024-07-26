@@ -34,7 +34,7 @@ public class ProductEntity {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private CategoryEntity categoryEntity;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "productEntity")
     private List<PurchaseProductEntity> purchaseProduct;
 
     public Integer getIdProduct() {

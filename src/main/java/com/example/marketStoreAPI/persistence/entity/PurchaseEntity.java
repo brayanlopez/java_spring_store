@@ -33,7 +33,7 @@ public class PurchaseEntity {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private ClientEntity clientEntity;
 
-    @OneToMany(mappedBy = "purchase")
+    @OneToMany(mappedBy = "purchaseEntity")
     private List<PurchaseProductEntity> purchases;
 
     public Integer getIdPurchase() {

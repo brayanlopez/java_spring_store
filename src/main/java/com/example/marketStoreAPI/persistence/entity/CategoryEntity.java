@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "categorias")
-public class  CategoryEntity {
+public class CategoryEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,7 +25,7 @@ public class  CategoryEntity {
   @Column(name = "estado")
   private Boolean status;
 
-  @OneToMany(mappedBy = "category")
+  @OneToMany(mappedBy = "categoryEntity")
   private List<ProductEntity> productEntities;
 
   public Integer getIdCategory() {
