@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "clients")
-public class Client {
+public class ClientEntity {
 
   @Id
   private String id;
@@ -31,7 +31,7 @@ public class Client {
   private String emailAddress;
 
   @OneToMany(mappedBy = "client")
-  private List<Purchase> purchases;
+  private List<PurchaseEntity> purchaseEntities;
 
   public String getId() {
     return id;
@@ -81,11 +81,11 @@ public class Client {
     this.emailAddress = emailAddress;
   }
 
-  public List<Purchase> getPurchases() {
-    return purchases;
+  public List<PurchaseEntity> getPurchases() {
+    return purchaseEntities;
   }
 
-  public void setPurchases(List<Purchase> purchases) {
-    this.purchases = purchases;
+  public void setPurchases(List<PurchaseEntity> purchaseEntities) {
+    this.purchaseEntities = purchaseEntities;
   }
 }

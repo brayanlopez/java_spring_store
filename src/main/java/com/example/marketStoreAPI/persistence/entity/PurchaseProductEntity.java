@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "compras_productos")
-public class PurchaseProduct {
+public class PurchaseProductEntity {
     @EmbeddedId
     private PurchaseProductPk id;
 
@@ -25,7 +25,7 @@ public class PurchaseProduct {
 
     @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)
-    private Purchase purchase;
+    private PurchaseEntity purchaseEntity;
 
     // @OneToMany(mappedBy = "product")
     // private List<PurchaseProduct> products;

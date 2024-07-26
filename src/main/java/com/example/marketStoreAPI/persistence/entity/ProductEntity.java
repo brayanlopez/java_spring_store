@@ -35,7 +35,7 @@ public class ProductEntity {
     private CategoryEntity categoryEntity;
 
     @OneToMany(mappedBy = "product")
-    private List<PurchaseProduct> purchaseProduct;
+    private List<PurchaseProductEntity> purchaseProduct;
 
     public Integer getIdProduct() {
         return idProduct;
