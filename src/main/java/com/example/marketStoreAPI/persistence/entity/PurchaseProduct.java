@@ -3,7 +3,6 @@ package com.example.marketStoreAPI.persistence.entity;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
 @Table(name = "compras_productos")
@@ -22,7 +21,7 @@ public class PurchaseProduct {
 
     @ManyToOne
     @JoinColumn(name = "id_producto", insertable = false, updatable = false)
-    private Product product;
+    private ProductEntity productEntity;
 
     @ManyToOne
     @JoinColumn(name = "id_compra", insertable = false, updatable = false)

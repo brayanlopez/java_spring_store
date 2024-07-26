@@ -12,8 +12,8 @@ public class HelloWorldController {
 
     @GetMapping("/hola")
     public String Saludar() {
-        ProductRepository productRepository = new ProductRepository();
-        System.out.println(productRepository.getAll().toString());
+        // ProductRepository productRepository = new ProductRepository();
+        // System.out.println(productRepository.getAll().toString());
         return "<h1>hola mundo</h1>";
     }
 

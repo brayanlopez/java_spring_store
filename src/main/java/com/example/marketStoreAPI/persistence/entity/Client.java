@@ -33,4 +33,59 @@ public class Client {
   @OneToMany(mappedBy = "client")
   private List<Purchase> purchases;
 
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getLastName() {
+    return lastName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+  public Long getCellphone() {
+    return cellphone;
+  }
+
+  public void setCellphone(Long cellphone) {
+    this.cellphone = cellphone;
+  }
+
+  public String getAddress() {
+    return address;
+  }
+
+  public void setAddress(String address) {
+    this.address = address;
+  }
+
+  public String getEmailAddress() {
+    return emailAddress;
+  }
+
+  public void setEmailAddress(String emailAddress) {
+    this.emailAddress = emailAddress;
+  }
+
+  public List<Purchase> getPurchases() {
+    return purchases;
+  }
+
+  public void setPurchases(List<Purchase> purchases) {
+    this.purchases = purchases;
+  }
 }

@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "productos")
-public class Product {
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,7 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
-    private Category category;
+    private CategoryEntity categoryEntity;
 
     @OneToMany(mappedBy = "product")
     private List<PurchaseProduct> purchaseProduct;
