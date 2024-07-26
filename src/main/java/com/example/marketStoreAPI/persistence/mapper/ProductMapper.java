@@ -20,7 +20,7 @@ public interface ProductMapper {
     })
     Product toProduct(ProductEntity product);
 
-    List<Product> toProducts(List<Product> products);
+    List<Product> toProducts(List<ProductEntity> products);
 
     @InheritInverseConfiguration
     @Mapping(target = "barcode", ignore = true)
