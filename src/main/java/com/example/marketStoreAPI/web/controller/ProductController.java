@@ -20,22 +20,22 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Product> getProduct(int productId) {
+    public Optional<Product> getProduct(@PathVariable("id") int productId) {
         return productService.getProduct(productId);
     }
 
     @GetMapping("/category/{id}")
-    public Optional<List<Product>> getByCategory(int categoryId) {
+    public Optional<List<Product>> getByCategory(@PathVariable("id") int categoryId) {
         return productService.getByCategory(categoryId);
     }
 
     @PostMapping()
-    public Product save(Product product) {
+    public Product save(@RequestBody Product product) {
         return productService.save(product);
     }
 
     @DeleteMapping("/{id}")
-    public boolean delete(int productId) {
+    public boolean delete(@PathVariable("id") int productId) {
         return productService.delete(productId);
     }
 }
