@@ -13,18 +13,18 @@ import java.util.List;
 public interface PurchaseMapper {
 
     @Mappings({
-            @Mapping(source = "idCompra", target = "purchaseId"),
-            @Mapping(source = "idCliente", target = "clientId"),
-            @Mapping(source = "fecha", target = "date"),
-            @Mapping(source = "medioPago", target = "paymentMethod"),
-            @Mapping(source = "comentario", target = "comment"),
-            @Mapping(source = "estado", target = "state"),
-            @Mapping(source = "productos", target = "items")
+            @Mapping(source = "idPurchase", target = "purchaseId"),
+            @Mapping(source = "idClient", target = "clientId"),
+            @Mapping(source = "date", target = "date"),
+            @Mapping(source = "paymentMethod", target = "paymentMethod"),
+            @Mapping(source = "comment", target = "comment"),
+            @Mapping(source = "status", target = "state"),
+            @Mapping(source = "products", target = "item")
     })
-    Purchase toPurchase(PurchaseEntity compra);
-    List<Purchase> toPurchases(List<PurchaseEntity> compras);
+    Purchase toPurchase(PurchaseEntity purchaseEntity);
+    List<Purchase> toPurchases(List<PurchaseEntity> purchasesEntities);
 
     @InheritInverseConfiguration
-    @Mapping(target = "cliente", ignore = true)
+    @Mapping(target = "clientEntity", ignore = true)
     PurchaseEntity toPurchaseEntity(Purchase purchase);
 }

@@ -36,6 +36,9 @@ public class PurchaseEntity {
     @OneToMany(mappedBy = "purchaseEntity")
     private List<PurchaseProductEntity> purchases;
 
+    @OneToMany(mappedBy = "purchaseEntity", cascade = {CascadeType.ALL})
+    private List<PurchaseProductEntity> products;
+
     public Integer getIdPurchase() {
         return idPurchase;
     }
@@ -82,5 +85,29 @@ public class PurchaseEntity {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public ClientEntity getClientEntity() {
+        return clientEntity;
+    }
+
+    public void setClientEntity(ClientEntity clientEntity) {
+        this.clientEntity = clientEntity;
+    }
+
+    public List<PurchaseProductEntity> getPurchases() {
+        return purchases;
+    }
+
+    public void setPurchases(List<PurchaseProductEntity> purchases) {
+        this.purchases = purchases;
+    }
+
+    public List<PurchaseProductEntity> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<PurchaseProductEntity> products) {
+        this.products = products;
     }
 }

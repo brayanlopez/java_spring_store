@@ -9,9 +9,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "clients")
+@Table(name = "clientes")
 public class ClientEntity {
-
   @Id
   private String id;
 

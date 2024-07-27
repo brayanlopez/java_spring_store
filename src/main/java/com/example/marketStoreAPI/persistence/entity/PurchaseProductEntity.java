@@ -61,4 +61,20 @@ public class PurchaseProductEntity {
     public void setStatus(Boolean status) {
         this.status = status;
     }
+
+    public ProductEntity getProductEntity() {
+        return productEntity;
+    }
+
+    public void setProductEntity(ProductEntity productEntity) {
+        this.productEntity = productEntity;
+    }
+
+    public PurchaseEntity getPurchaseEntity() {
+        return purchaseEntity;
+    }
+
+    public void setPurchaseEntity(PurchaseEntity purchaseEntity) {
+        this.purchaseEntity = purchaseEntity;
+    }
 }
