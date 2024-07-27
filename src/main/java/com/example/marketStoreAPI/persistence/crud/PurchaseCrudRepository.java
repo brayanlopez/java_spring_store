@@ -9,6 +9,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PurchaseCrudRepository extends CrudRepository<PurchaseEntity, Integer> {
-    @Query(value = "SELECT * FROM clientes WHERE id = ?", nativeQuery = true)
-    Optional<List<PurchaseEntity>> findByIdClient(String idCliente);
+    @Query(value = "SELECT * FROM compras WHERE id_cliente = ?", nativeQuery = true)
+    Optional<List<PurchaseEntity>> findByIdClient(String idClient);
 }
