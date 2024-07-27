@@ -15,7 +15,7 @@ public class ProductEntity {
     @Column(name = "nombre")
     private String name;
 
-    @Column(name = "id_category")
+    @Column(name = "id_categoria")
     private Integer idCategory;
 
     @Column(name = "codigo_barras")
@@ -91,5 +91,21 @@ public class ProductEntity {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public CategoryEntity getCategoryEntity() {
+        return categoryEntity;
+    }
+
+    public void setCategoryEntity(CategoryEntity categoryEntity) {
+        this.categoryEntity = categoryEntity;
+    }
+
+    public List<PurchaseProductEntity> getPurchaseProduct() {
+        return purchaseProduct;
+    }
+
+    public void setPurchaseProduct(List<PurchaseProductEntity> purchaseProduct) {
+        this.purchaseProduct = purchaseProduct;
     }
 }

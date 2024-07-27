@@ -2,12 +2,16 @@ package com.example.marketStoreAPI.persistence.mapper;
 
 import com.example.marketStoreAPI.domain.Product;
 import com.example.marketStoreAPI.persistence.entity.ProductEntity;
+
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
 import java.util.List;
 
+import org.mapstruct.Mapper;
+
+@Mapper(componentModel = "spring", uses = { CategoryMapper.class })
 public interface ProductMapper {
     @Mappings({
             @Mapping(source = "idProduct", target = "productId"),
